@@ -1,7 +1,7 @@
 function updateCountdown() {
     // Fecha final: Defínela según sea necesario
     // Por ejemplo, el 14 de febrero de 2026 a las 00:00
-    const targetDate = new Date('2026-02-1T00:00:00').getTime();
+    const targetDate = new Date('2026-02-14T00:00:00').getTime();
     
     const timer = setInterval(() => {
         const now = new Date().getTime();
