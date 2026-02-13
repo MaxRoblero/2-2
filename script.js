@@ -1,7 +1,7 @@
 function updateCountdown() {
-    // Fecha final: Defínela según sea necesario
-    // Por ejemplo, el 14 de febrero de 2026 a las 00:00
-    const targetDate = new Date('2026-02-14T00:00:00').getTime();
+    // Ajusta la fecha final según lo que quieras
+    const targetDate = new Date('2026-02-13T00:00:00').getTime();
+    document.getElementById('finalMessage').style.display = 'none'; // Ocultar mensaje inicial
     
     const timer = setInterval(() => {
         const now = new Date().getTime();
@@ -17,13 +17,16 @@ function updateCountdown() {
             document.getElementById('hours').textContent = String(hours).padStart(2, '0');
             document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
             document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            clearInterval(messa)
         } else {
             clearInterval(timer);
             // Eliminar header
             document.querySelector('header').style.display = 'none';
-            // Palabra de amor cifrada con César +2: "EMILY" → "GOKNA"
-            document.getElementById('countdown').innerHTML = '<div style="margin-bottom: 30px; font-size: 2em; color: #ffd700;">GOKNA</div><div style="font-size: 1.5em; color: #ff69b4; font-weight: bold;">2/2 COMPLETADO</div>';
-            // Mostrar botón
+            document.getElementById('countdown').innerHTML = `
+                <div style="margin-bottom: 30px; font-size: 2em; color: #ffd700;">GOKNA</div>
+                <div style="font-size: 1.5em; color: #ff69b4; font-weight: bold;">2/2 COMPLETADO</div>
+            `;
+            document.getElementById('finalMessage').style.display = 'block'; // Mostrar mensaje final
             document.getElementById('nextButton').style.display = 'block';
         }
     }, 1000);
@@ -35,5 +38,5 @@ updateCountdown();
 // Configurar botón para redirigir (cambia la URL según sea necesario)
 document.getElementById('nextButton').addEventListener('click', function() {
     // Reemplaza 'URL_DE_DESTINO' con la página a la que deseas redirigir
-    window.location.href = 'URL_DE_DESTINO';
+    window.location.href = 'https://maxroblero.github.io/Te-Amo/';
 });

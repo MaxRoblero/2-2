@@ -8,7 +8,7 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="titlePhase" style="position: absolute; top: 20px; font-size: 4em; font-weight: bold; color: #ff69b4; text-shadow: 0 0 20px rgba(255, 105, 180, 0.5);">2/2</div>
+    <div id="titlePhase" class="title-phase">2/2</div>
     <header>
         <h1>Tiempo restante:</h1>
     </header>
@@ -20,7 +20,9 @@
             <span id="minutes">00</span> Minutos 
             <span id="seconds">00</span> Segundos
         </div>
-        <button id="nextButton" style="display: none; margin-top: 30px; padding: 12px 30px; font-size: 1.1em; background-color: #ff69b4; color: white; border: none; border-radius: 5px; cursor: pointer; text-shadow: 0 0 10px rgba(255, 105, 180, 0.6);">Continuar</button>
+        <div id="message"></div>
+        <span id="finalMessage">"Las letras no están mal… solo llegaron un poco antes de tiempo. Avanza cada una dos pasos y léelo otra vez."</span>
+        <button id="nextButton">Continuar</button>
     </main>
 </body>
 </html>
