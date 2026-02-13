@@ -1,6 +1,6 @@
 function updateCountdown() {
     // Ajusta la fecha final según lo que quieras
-    const targetDate = new Date('2026-02-13T00:00:00').getTime();
+    const targetDate = new Date('2026-02-14T00:00:00').getTime();
     document.getElementById('finalMessage').style.display = 'none'; // Ocultar mensaje inicial
     
     const timer = setInterval(() => {
